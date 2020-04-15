@@ -1,10 +1,9 @@
 ---
 -   name: Add authorized key
-    hosts: all
+    hosts: site
     remote_user: root
     tasks:
-        -   name Add user authorized key
+        -   name: Add user authorized key
             authorized_key:
                 user: deploy
                 key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
-
