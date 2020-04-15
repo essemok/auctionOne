@@ -1,0 +1,4 @@
+certbot_email: beee.semok@gmail.com
+certbot_hosts:
+    - auctionone.ru
+    - api.auctionone.ru
