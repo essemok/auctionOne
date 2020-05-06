@@ -2,11 +2,9 @@
 
 declare(strict_types=1);
 
-use DI\Container;
+use App\Http\Action\HomeAction;
 use DI\ContainerBuilder;
 use Slim\Factory\AppFactory;
-use Psr\Http\Message\ServerRequestInterface as Request;
-use Psr\Http\Message\ResponseInterface as Response;
 
 http_response_code(500);
 
@@ -26,10 +24,7 @@ $app = AppFactory::createFromContainer($container);
 
 $app->addErrorMiddleware($container->get('config')['debug'], true, true);
 
-$app->get('/', function (Request $request, Response $response, $args) {
-   $response->getBody()->write('{}');
-   return $response->withHeader('Content-Type', 'application/json');
-});
+$app->get('/', HomeAction::class);
 
 $app->run();
 
