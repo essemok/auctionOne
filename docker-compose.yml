@@ -37,7 +37,8 @@ services:
         volumes:
             - ./api:/app
         environment:
-          APP_DEBUG: 1
+            APP_ENV: dev
+            APP_DEBUG: 1
 
     api-php-cli:
         build:
@@ -47,5 +48,6 @@ services:
         volumes:
             - ./api:/app
         environment:
-          APP_DEBUG: 1
+            APP_ENV: dev
+            APP_DEBUG: 1
 
