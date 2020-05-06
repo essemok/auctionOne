@@ -26,6 +26,12 @@ services:
     api-php-fpm:
         image: ${REGISTRY}/auctionone-api-php-fpm:#{IMAGE_TAG}
         restart: always
+        environment:
+            APP_ENV: prod
+            APP_DEBUG: 0
 
     api-php-cli:
         image: ${REGISTRY}/auctionone-api-php-fpm:#{IMAGE_TAG}
+        environment:
+            APP_ENV: prod
+            APP_DEBUG: 0
