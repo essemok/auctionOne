@@ -36,6 +36,8 @@ services:
         container_name: api-php-fpm
         volumes:
             - ./api:/app
+        environment:
+          APP_DEBUG: 1
 
     api-php-cli:
         build:
@@ -44,4 +46,6 @@ services:
         container_name: api-php-cli
         volumes:
             - ./api:/app
+        environment:
+          APP_DEBUG: 1
 
