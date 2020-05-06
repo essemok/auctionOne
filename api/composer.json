@@ -1,0 +1,17 @@
+{
+    "name": "essemok/auctionone",
+    "description": "training project",
+    "type": "project",
+    "config": {
+        "process-timeout": 0,
+        "sort-packages": true
+    },
+    "require": {
+        "php": "^7.4",
+        "slim/psr7": "^1.1",
+        "slim/slim": "^4.5"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    }
+}
