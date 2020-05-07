@@ -22,6 +22,6 @@
         }
     },
     "scripts": {
-        "app": "php bin/app.php --ansi"
+        "commands": "php bin/app.php --ansi"
     }
 }
